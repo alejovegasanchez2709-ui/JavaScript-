@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <label>Número 1:</label>
+  <input type="number" id="n1"><br><br>
+  
+  <label>Número 2:</label>
+  <input type="number" id="n2"><br><br>
+
+  <button onclick="mostrarMayor()">Comparar</button>
+
+  <script>
+    function mostrarMayor() {
+      const num1 = parseFloat(document.getElementById('n1').value);
+      const num2 = parseFloat(document.getElementById('n2').value);
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Por favor, completa ambos campos con números.");
+      } else if (num1 > num2) {
+        alert("El mayor es: " + num1);
+      } else if (num2 > num1) {
+        alert("El mayor es: " + num2);
+      } else {
+        alert("Ambos números son iguales.");
+      }
+    }
+  </script>
+</body>
+</html>

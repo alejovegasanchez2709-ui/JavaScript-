@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <label>Nombre:</label>
+  <input type="text" id="nombre"><br><br>
+
+  <label>Apellido:</label>
+  <input type="text" id="apellido"><br><br>
+
+  <button onclick="concatenar()">Unir Nombre Completo</button><br><br>
+
+  <label>Resultado:</label>
+  <input type="text" id="resultado" readonly>
+
+  <script>
+    function concatenar() {
+      const nom = document.getElementById('nombre').value;
+      const ape = document.getElementById('apellido').value;
+      
+      // Asignamos el valor concatenado al tercer input
+      document.getElementById('resultado').value = nom + " " + ape;
+    }
+  </script>
+</body>
+</html>
