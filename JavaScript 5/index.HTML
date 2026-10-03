@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Validar Contraseña</title>
+</head>
+<body>
+
+    <h2>Contraseña</h2>
+
+    <label for="clave1">Ingrese la contraseña:</label>
+    <input type="password" id="clave1"><br><br>
+
+    <label for="clave2">Repita la contraseña:</label>
+    <input type="password" id="clave2"><br><br>
+
+    <button onclick="verificarClaves()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarClaves() {
+            let clave1 = document.getElementById("clave1").value;
+            let clave2 = document.getElementById("clave2").value;
+
+            if (clave1 == clave2) {
+                document.getElementById("resultado").innerHTML =
+                    " Las contraseñas son iguales.";
+            } else {
+                document.getElementById("resultado").innerHTML =
+                    " Las contraseñas son diferentes.";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen</title>
+</head>
+<body>
+
+    <h2>Examen Multiple Choice</h2>
+
+    <p>1. ¿Cuál es la capital de Argentina?</p>
+    <select id="p1">
+        <option value="0">Córdoba</option>
+        <option value="1">Buenos Aires</option>
+        <option value="0">Rosario</option>
+    </select>
+
+    <p>2. ¿Cuánto es 5 + 3?</p>
+    <select id="p2">
+        <option value="0">6</option>
+        <option value="0">7</option>
+        <option value="1">8</option>
+    </select>
+
+    <p>3. ¿Cuál es el planeta más cercano al Sol?</p>
+    <select id="p3">
+        <option value="1">Mercurio</option>
+        <option value="0">Venus</option>
+        <option value="0">Marte</option>
+    </select>
+
+    <p>4. ¿Qué lenguaje se utiliza para dar estructura a una página web?</p>
+    <select id="p4">
+        <option value="1">HTML</option>
+        <option value="0">CSS</option>
+        <option value="0">JavaScript</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="corregirExamen()">Corregir Examen</button>
+
+    <h3 id="resultado"></h3>
+
+    <script>
+        function corregirExamen() {
+            let correctas = 0;
+
+            correctas += parseInt(document.getElementById("p1").value);
+            correctas += parseInt(document.getElementById("p2").value);
+            correctas += parseInt(document.getElementById("p3").value);
+            correctas += parseInt(document.getElementById("p4").value);
+
+            let incorrectas = 4 - correctas;
+
+            document.getElementById("resultado").innerHTML =
+                "Respuestas correctas: " + correctas +
+                "<br>Respuestas incorrectas: " + incorrectas;
+        }
+    </script>
+
+</body>
+</html>
